@@ -10,7 +10,7 @@ jobs:
       run: echo "Building app in progress......"
       
  test:
-  runs-on: uubuntu-slim
+  runs-on: ubuntu-slim
   needs: build
   steps:
     - name: runs only after build
