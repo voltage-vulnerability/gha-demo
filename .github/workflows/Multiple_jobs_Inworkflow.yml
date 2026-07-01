@@ -1,0 +1,23 @@
+name: Multiple jobs in a workflow
+
+on: workflow_dispatch
+
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Build Step
+       run: echo "$(whoami)"
+       
+  test:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Testing
+       run: echo "Testing the build: $(id)"
+
+   deploy:
+    runs-on: ubuntu-latest
+    steps:
+     - name: deplyment
+       run: echo "Deploying the App...."
+       
