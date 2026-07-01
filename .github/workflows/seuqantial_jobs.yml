@@ -1,0 +1,30 @@
+name: Sequantial jobs
+
+on: workflow_dispatch
+
+jobs:
+ build:
+  runs-on: ubuntu-slim
+  steps:
+    - name: building the app
+      run: echo "Building app in progress......"
+      
+ test:
+  runs-on: uubuntu-slim
+  needs: build
+  steps:
+    - name: runs only after build
+      run: echo "Build completed testing!!!"
+      
+ deploy:
+  runs-on: ubuntu-slim
+  needs:
+    - build
+    - test
+  steps:
+    - name: deployment
+      run: echo "Build pass test pass deploying"
+      
+   
+
+     
