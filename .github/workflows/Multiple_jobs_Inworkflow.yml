@@ -13,7 +13,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: Testing
-       run: echo "Testing the build: $(id)"
+       run: echo 'Testing the build $(hostname)'
 
    deploy:
     runs-on: ubuntu-latest
