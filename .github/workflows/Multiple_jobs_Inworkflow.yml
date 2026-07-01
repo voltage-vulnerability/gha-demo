@@ -15,9 +15,9 @@ jobs:
      - name: Testing
        run: echo 'Testing the build $(hostname)'
 
-   deploy:
-    runs-on: ubuntu-latest
-    steps:
+  deploy:
+   runs-on: ubuntu-latest
+   steps:
      - name: deplyment
        run: echo "Deploying the App...."
        
