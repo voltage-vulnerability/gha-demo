@@ -1,0 +1,12 @@
+name: Event Based Trigger
+
+on: push
+
+jobs:
+  trigger_on_push:
+   runs-on: ubuntu-slim
+   steps:
+     - name: Simple shell command
+       run: echo "this triggered by ===> PUSH request."
+       
+  
