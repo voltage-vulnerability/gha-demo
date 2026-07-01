@@ -9,8 +9,11 @@ jobs:
      - name: Commands
        run: |
          ls -la
+         touch test.txt
+         chmod 777 test.txt
          echo "This is one line" > test.txt
          echo "This is 2nd line" >> test.txt
+         ls -la
          cat test.txt
          
 
