@@ -1,0 +1,16 @@
+name: IF demo
+
+on:
+ push:
+  branches:
+    - main
+    - develop
+jobs:
+  demo:
+   runs-on: ubuntu-slim
+   steps:
+    - name: Run if branch is main
+      if: github.ref == 'refs/heads/main'
+      run: echo "Running the step"
+    - name: Second Step
+      run: echo "Second step withput condition"
