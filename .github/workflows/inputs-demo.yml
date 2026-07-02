@@ -7,10 +7,19 @@ on:
      description: Choose environment to deploy
      required: true
      default: dev
+     type: choice
+     options:
+       - dev
+       - test
+       - prod
+   artifacts_tag:
+    description: Choose the git tag to deploy
+    required: true
+    
      
 jobs:
  input-demo:
   runs-on: ubuntu-slim
   steps:
     - name: deploy app
-      run: echo "Deploying the application to ${{ inputs.environment }}"
+      run: echo "Deploying the ${{ inputs.artifacts_tag }} application to ${{ inputs.environment }}"
