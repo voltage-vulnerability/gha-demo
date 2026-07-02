@@ -1,0 +1,13 @@
+name: Check out example
+
+on: workflow_dispatch
+
+jobs:
+ CheckOut:
+  runs-on: ubuntu-slim
+  steps:
+    - name: check out index file
+      uses: actions/checkout@v4
+    - name: Print index.html
+      run: cat index.html
+  
