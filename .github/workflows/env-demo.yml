@@ -11,4 +11,6 @@ jobs:
    runs-on: ubuntu-slim
    steps:
      - name: Connecting to dev
+       env:
+         APP_ENV: "at step level"
        run: echo "App is connecting to $APP_ENV"
