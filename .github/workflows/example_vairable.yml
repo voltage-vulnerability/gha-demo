@@ -16,9 +16,9 @@ jobs:
    needs: printVariable
    steps:
      - name: secret value
-       run: |
-        echo "Secret will not be printed on screen"
-        echo "Hello!!, ${{ secrets.MY_SECRET }}"
-        echo "DONE!!"
+       run: echo "Secret will not be printed on screen"
+     - name: Testing screen  
+       run: echo "Hello!!, ${{ secrets.MY_SECRET }}"
+       
 
         
