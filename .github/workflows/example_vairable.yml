@@ -1,0 +1,14 @@
+name: variable demo
+
+on: workflow_dispatch
+
+jobs:
+  print variable:
+   runs-on: ubuntu-slim
+   steps:
+     - name: variable value
+       run: |
+        echo ${{ vars.my_variable}}
+        echo "Variable value printed"
+
+       
