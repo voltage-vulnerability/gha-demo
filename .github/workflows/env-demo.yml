@@ -1,0 +1,12 @@
+name: Env Demo
+
+on: workflow_dispatch
+env:
+ APP_ENV: "dev"
+
+jobs:
+  env_demo:
+   runs-on: ubuntu-slim
+   steps:
+     - name: Connecting to dev
+       run: echo "App is connecting to $APP_ENV"
