@@ -18,7 +18,7 @@ jobs:
      - name: secret value
        run: |
         echo "Secret will not be printed on screen"
-        echo ${{ secrets.my_secret }}
+        echo ${{ secrets.MY_SECRET }}
         echo "DONE!!"
 
         
