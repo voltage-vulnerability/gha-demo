@@ -3,7 +3,7 @@ name: variable demo
 on: workflow_dispatch
 
 jobs:
-  print variable:
+  printVariable:
    runs-on: ubuntu-slim
    steps:
      - name: variable value
