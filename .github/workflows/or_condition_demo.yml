@@ -12,3 +12,6 @@ jobs:
     - name: print the actor
       if: github.actor=='voltage-vulnerability'
       run: echo "Actor is voltage.vulnerability"
+    - name: no actor
+      if: github.actor!='voltage-vulnerability'
+      run: echo "This is not correct actor"
