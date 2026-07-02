@@ -10,7 +10,7 @@ jobs:
    runs-on: ubuntu-slim
    steps:
     - name: Run if branch is main
-      if: github.ref == 'refs/heads/main'
+      if: github.ref_name == 'main'
       run: echo "Running the step"
     - name: Second Step
       run: echo "Second step withput condition"
