@@ -10,9 +10,5 @@ jobs:
    runs-on: ubuntu-slim
    steps:
     - name: print the actor
-      run: echo "The actor name is ${{ github.actor }} "
-    - name: Run for voltage-vulnerability or wish
-      if: github.actor == 'voltage-vulnerability'  || github.actor == 'vishal1'
-      run: echo "Running this by voltage or vishal"
-    - name: Second Step
-      run: echo "Second step withput condition"
+      if: github.actor=='voltage-vulnerability'
+      run: echo "Actor is voltage.vulnerability"
