@@ -1,4 +1,4 @@
-name: variable demo
+name: variable and secrets demo
 
 on: workflow_dispatch
 
@@ -11,4 +11,14 @@ jobs:
         echo ${{ vars.my_variable}}
         echo "Variable value printed"
 
-       
+  printSecret:
+   runs-on: ubuntu-slim
+   needs: printVariable
+   steps:
+     - name: secret value
+       run: |
+        echo "Secret will not be printed on screen"
+        echo ${{ secrets.my_secret }}
+        echo "DONE!!"
+
+        
