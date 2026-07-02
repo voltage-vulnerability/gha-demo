@@ -1,6 +1,6 @@
 name: Event Based Trigger
 
-on: push
+#on: push
 
 jobs:
   trigger_on_push:
