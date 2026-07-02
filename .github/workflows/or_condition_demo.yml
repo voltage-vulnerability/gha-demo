@@ -1,0 +1,16 @@
+name: OR demo
+
+on:
+ push:
+  branches:
+    - main
+    - develop
+jobs:
+  demo:
+   runs-on: ubuntu-slim
+   steps:
+    - name: Run for voltage-vulnerability or wish
+      if: github.actor == 'voltage-vulnerability'  || github.actor == 'vishal'
+      run: echo "Running this by voltage or vishal"
+    - name: Second Step
+      run: echo "Second step withput condition"
