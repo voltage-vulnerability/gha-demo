@@ -13,4 +13,4 @@ jobs:
   runs-on: ubuntu-slim
   steps:
     - name: deploy app
-      run: echo "Deploying the application to ${{ inputs.environment }}
+      run: echo "Deploying the application to ${{ inputs.environment }}"
