@@ -11,7 +11,9 @@ jobs:
    runs-on: ubuntu-slim
    steps:
     - name: Perform code Quality Checks
-      run: echo "performing quality checks on the code" 
+      run: |
+        echo "performing quality checks on the code"
+        exit 1
   dev_deploy:
    runs-on: ubuntu-slim
    if: github.ref_name == 'develop' && github.event_name == 'push'
